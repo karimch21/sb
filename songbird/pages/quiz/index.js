@@ -11,6 +11,7 @@ let riddleBlockSeconds = 0;
 let totalSeconds = 0;
 let totalMinute = 0;
 let birdGuessed = birdGuessing(birdsData, gameCount);
+alert('hi')
 class Player {
   addAudioSingingGuessBird(riddleAudio, birdsData, gameCount) {
     if (!riddleAudio) return
@@ -22,6 +23,7 @@ class Player {
   }
   riddleOffLoaderAduio(audioWrapper) {
     if (!audioWrapper) return
+    alert('preloader off')
     audioWrapper.classList.add('audio-wrapper-disabled_off')
   }
   switchPlaySinginBird(audio, btnPlay) {
