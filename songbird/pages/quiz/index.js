@@ -88,8 +88,9 @@ class Player {
   }
   settingVolume(audio, songVolume) {
     if (!audio && !songVolume) return
-    alert((songVolume / 100).toFixed(1), 1234)
+    
     audio.volume = (songVolume / 100).toFixed(1);
+    alert(audio.volume)
   }
 }
 let riddleAudioPlayer = new Player();
