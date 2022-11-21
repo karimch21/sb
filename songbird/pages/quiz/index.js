@@ -105,33 +105,33 @@ riddleAudioPlayer.funAlert()
 export { birdGuessed as default, appendBirdsList, birdGuessing, Player }
 
 window.addEventListener('load', windowLoadHandler);
-riddleBtnPlay.addEventListener('click', (e) => {
-  riddleAudioPlayer.switchPlaySinginBird(riddleAudio, riddleBtnPlay)
-})
-riddleAudioDecorated.addEventListener('input', () => {
-  let audioDecorated = riddleAudioPlayer.defeniteAudioDecorated(riddleAudio);
-  riddleAudioPlayer.movingRiddleAudioDecorated(riddleAudio, audioDecorated)
-})
-riddleAudio.addEventListener('canplay', () => {
-  const audioWrapper = document.querySelector('.riddle__audio-box');
-  alert('call function delete preloader')
-  riddleAudioPlayer.riddleOffLoaderAduio(audioWrapper)
-  let audioDecorated = riddleAudioPlayer.defeniteAudioDecorated(riddleAudio);
-  audioDecorated.max = Math.ceil(riddleAudio.duration)
-});
-riddleAudio.addEventListener('timeupdate', (e) => {
-  riddleAudioPlayer.playSinginBirdHandler(riddleAudio)
-  riddleAudioPlayer.showRiddleAudioCurrentTime(riddleAudio, riddleBlockMinute, riddleBlockSeconds, totalMinute, totalSeconds, riddleBoxCurrentTime, riddleBoxTotalTime)
-});
-riddleAudio.addEventListener('ended', () => {
-  riddleAudioPlayer.endAudioHandler(riddleBtnPlay)
-});
 
-riddleVolume.addEventListener('input', changeRiddleVolume);
 
 function windowLoadHandler() {
   appendBirdsList(birdsData, gameCount)
   riddleAudioPlayer.addAudioSingingGuessBird(riddleAudio, birdGuessed, gameCount)
+  riddleBtnPlay.addEventListener('click', (e) => {
+    riddleAudioPlayer.switchPlaySinginBird(riddleAudio, riddleBtnPlay)
+  })
+  riddleAudioDecorated.addEventListener('input', () => {
+    let audioDecorated = riddleAudioPlayer.defeniteAudioDecorated(riddleAudio);
+    riddleAudioPlayer.movingRiddleAudioDecorated(riddleAudio, audioDecorated)
+  })
+  riddleAudio.addEventListener('canplay', () => {
+    const audioWrapper = document.querySelector('.riddle__audio-box');
+    alert('call function delete preloader')
+    riddleAudioPlayer.riddleOffLoaderAduio(audioWrapper)
+    let audioDecorated = riddleAudioPlayer.defeniteAudioDecorated(riddleAudio);
+    audioDecorated.max = Math.ceil(riddleAudio.duration)
+  });
+  riddleAudio.addEventListener('timeupdate', (e) => {
+    riddleAudioPlayer.playSinginBirdHandler(riddleAudio)
+    riddleAudioPlayer.showRiddleAudioCurrentTime(riddleAudio, riddleBlockMinute, riddleBlockSeconds, totalMinute, totalSeconds, riddleBoxCurrentTime, riddleBoxTotalTime)
+  });
+  riddleAudio.addEventListener('ended', () => {
+    riddleAudioPlayer.endAudioHandler(riddleBtnPlay)
+  });
+  riddleVolume.addEventListener('input', changeRiddleVolume);
 }
 
 function birdGuessing(birdsData, gameCount) {
