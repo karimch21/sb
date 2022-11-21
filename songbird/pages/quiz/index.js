@@ -23,6 +23,7 @@ class Player {
     if (!riddleAudio) return
     birdsData[gameCount].forEach(bird => {
       if (bird.guess) {
+        alert('src filled')
         riddleAudio.src = bird.audio;
       }
     });
