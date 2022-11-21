@@ -90,7 +90,6 @@ class Player {
     if (!audio && !songVolume) return
     
     audio.volume = (songVolume / 100).toFixed(1);
-    alert(audio.volume)
   }
 }
 let riddleAudioPlayer = new Player();

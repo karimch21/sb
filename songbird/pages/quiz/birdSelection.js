@@ -207,7 +207,7 @@ function clearCardBird() {
 function returnRiddleBlockDefaultView() {
   let riddle = document.querySelector('.riddle');
   if (!riddle) return
-  alert('rebuild riddle riddle block')
+
   riddle.innerHTML = `
     <div class="riddle__inner">
           <div class="riddle__img-box">
@@ -260,7 +260,7 @@ function updateRiddleAudio() {
 
   if (!riddleAudio) return
   riddleAudio.addEventListener('loadedmetadata', () => {
-    alert('loadedmetadata game audioplayer')
+  
     audioPlayer.riddleOffLoaderAduio()
     let audioDecorated = audioPlayer.defeniteAudioDecorated(riddleAudio);
     audioDecorated.max = Math.ceil(riddleAudio.duration);
