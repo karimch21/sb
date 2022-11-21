@@ -22,6 +22,7 @@ class Player {
     });
   }
   riddleOffLoaderAduio(audioWrapper) {
+    alert('audioWrapper not found')
     if (!audioWrapper) return
     alert('preloader off')
     audioWrapper.classList.add('audio-wrapper-disabled_off')
@@ -106,6 +107,7 @@ riddleAudioDecorated.addEventListener('input', () => {
 })
 riddleAudio.addEventListener('canplay', () => {
   const audioWrapper = document.querySelector('.riddle__audio-box');
+  alert('call function delete preloader')
   riddleAudioPlayer.riddleOffLoaderAduio(audioWrapper)
   let audioDecorated = riddleAudioPlayer.defeniteAudioDecorated(riddleAudio);
   audioDecorated.max = Math.ceil(riddleAudio.duration)
