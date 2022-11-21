@@ -13,6 +13,9 @@ let totalMinute = 0;
 let birdGuessed = birdGuessing(birdsData, gameCount);
 alert('hi')
 class Player {
+  funAlert(){
+    alert('classes do not work');
+  }
   addAudioSingingGuessBird(riddleAudio, birdsData, gameCount) {
     if (!riddleAudio) return
     birdsData[gameCount].forEach(bird => {
@@ -94,7 +97,7 @@ class Player {
 }
 let riddleAudioPlayer = new Player();
 let riddleAudioDecorated = riddleAudioPlayer.defeniteAudioDecorated(riddleAudio);
-
+riddleAudioPlayer.funAlert()
 export { birdGuessed as default, appendBirdsList, birdGuessing, Player }
 
 window.addEventListener('load', windowLoadHandler);
