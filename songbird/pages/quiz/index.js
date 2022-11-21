@@ -11,27 +11,19 @@ let riddleBlockSeconds = 0;
 let totalSeconds = 0;
 let totalMinute = 0;
 let birdGuessed = birdGuessing(birdsData, gameCount);
-alert('hi')
+
 class Player {
-  funAlert(){
-    alert('classes do not work');
-  }
-  checkExport(){
-    alert('Check export class')
-  }
+ 
   addAudioSingingGuessBird(riddleAudio, birdsData, gameCount) {
     if (!riddleAudio) return
     birdsData[gameCount].forEach(bird => {
       if (bird.guess) {
-        alert('src filled')
         riddleAudio.src = bird.audio;
       }
     });
   }
   riddleOffLoaderAduio(audioWrapper) {
-    alert('audioWrapper not found')
     if (!audioWrapper) return
-    alert('preloader off')
     audioWrapper.classList.add('audio-wrapper-disabled_off')
   }
   switchPlaySinginBird(audio, btnPlay) {
@@ -101,7 +93,7 @@ class Player {
 }
 let riddleAudioPlayer = new Player();
 let riddleAudioDecorated = riddleAudioPlayer.defeniteAudioDecorated(riddleAudio);
-riddleAudioPlayer.funAlert()
+
 export { birdGuessed as default, appendBirdsList, birdGuessing, Player }
 
 window.addEventListener('load', windowLoadHandler);
@@ -119,7 +111,7 @@ function windowLoadHandler() {
   })
   riddleAudio.addEventListener('loadedmetadata', () => {
     const audioWrapper = document.querySelector('.riddle__audio-box');
-    alert('call function delete preloader')
+
     riddleAudioPlayer.riddleOffLoaderAduio(audioWrapper)
     let audioDecorated = riddleAudioPlayer.defeniteAudioDecorated(riddleAudio);
     audioDecorated.max = Math.ceil(riddleAudio.duration)

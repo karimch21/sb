@@ -16,7 +16,7 @@ let totalSeconds = 0;
 let totalMinute = 0;
 let birdActiveCount = 0;
 console.log(audioPlayer)
-audioPlayer.checkExport()
+
 window.addEventListener('load', () => {
   appendSoundIndication();
 });
