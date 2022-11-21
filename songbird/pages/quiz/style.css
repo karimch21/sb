@@ -109,6 +109,7 @@
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.589);
   overflow: hidden;
+  z-index: 3;
 }
 .audio-wrapper-disabled::before{
   content: '';
