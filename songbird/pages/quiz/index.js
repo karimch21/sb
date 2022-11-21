@@ -16,6 +16,9 @@ class Player {
   funAlert(){
     alert('classes do not work');
   }
+  checkExport(){
+    alert('Check export class')
+  }
   addAudioSingingGuessBird(riddleAudio, birdsData, gameCount) {
     if (!riddleAudio) return
     birdsData[gameCount].forEach(bird => {
