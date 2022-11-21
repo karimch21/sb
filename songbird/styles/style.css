@@ -1,0 +1,152 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.main-content {
+    width: 100%;
+    flex: 1 0 auto;
+}
+
+
+.promo {
+    height: 100vh;
+    background: #000;
+    position: relative;
+}
+
+.promo::after {
+    content: "";
+    background-color: rgb(0 0 0 / 29%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.promo_active::after {
+    background-color: rgba(0, 0, 0, 0.671);
+}
+
+.promo__video {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    font-size: 0;
+}
+
+.footer {
+    padding: 20px 0;
+    flex: 0 0 auto;
+    width: 100%;
+    background-color: #000;
+}
+
+.info-author__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-author__year {
+    font-size: 24px;
+    color: #fff;
+}
+
+.footer__info-author {
+    color: #fff;
+}
+
+.footer__git-img {
+    height: 50px;
+}
+
+.footer__info-course {
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.footer__course-img {
+    width: 100px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.welcome-block_active {
+    background-color: rgba(0, 0, 0, 0.705);
+}
+
+.welcome-block__inner {
+    max-width: 480px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.795);
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: -500%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.welcome-block__inner_active {
+    animation-name: showingWelcomeBlock;
+}
+
+.welcome-block__title {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.welcome-block__info {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.welcome-block__info-title {
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.welcome-block__text {
+    font-size: 18px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.welcome-block__btn {
+    padding: 10px 5px;
+    font-size: 21px;
+    border-radius: 8px;
+    background-color: rgb(235, 86, 0);
+    display: block;
+    width: 100%;
+    transition: background-color 0.5s;
+}
+
+.welcome-block__btn:hover {
+    background-color: rgb(248, 59, 1);
+}
+
+@keyframes showingWelcomeBlock {
+    0% {
+        top: -500%;
+        transform: translate(-50%, -50%) rotate(-400deg);
+    }
+    100% {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
